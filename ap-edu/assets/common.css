@@ -1,0 +1,410 @@
+/* ::::: Fonts ::::: */
+
+@import url("fonts/material-icons.css");
+/* @import url("https://cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css"); */
+@import url("fonts/sansation.css");
+@import url("cards.css");
+@import url("slides.css");
+
+/* ::::: Page ::::: */
+
+:root {
+  --accent-color-1: rgb(234, 92, 37);
+  --accent-color-2: rgb(0, 68, 124);
+  --side-distance: 5em;
+}
+
+input,
+button,
+body {
+  font-family: "Sansation", "Segoe UI", "Helvetica", "Arial", sans-serif;
+  margin: 0;
+}
+
+main > div:not(.use-padding) {
+  margin-left: var(--side-distance);
+  margin-right: var(--side-distance);
+}
+
+main > div.use-padding {
+  padding-left: var(--side-distance);
+  padding-right: var(--side-distance);
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+h1.alt,
+h2,
+h3 {
+  color: var(--accent-color-2);
+}
+
+h1,
+h2.alt,
+h3.alt {
+  color: var(--accent-color-1);
+}
+
+div.center-text,
+h2.center,
+h3.center,
+h4.center,
+a.center,
+span.center,
+p.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+div.justify-text,
+a.justify,
+span.justify,
+p.justify {
+  text-align: justify;
+}
+
+h1.no-margin,
+h2.no-margin,
+h3.no-margin,
+h4.no-margin {
+  margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.separator {
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 2em 0;
+}
+
+.separator-inline {
+  margin: 2em 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.notice {
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+}
+
+.notice.fatal {
+  font-weight: bold;
+  color: red;
+  background: yellow;
+}
+
+.video-frame {
+  width: 500px;
+  height: 300px;
+  border: none;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.js .noscript {
+  display: none;
+}
+
+a.plain {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent-color-2);
+}
+
+a:focus,
+a:hover {
+  color: var(--accent-color-1);
+  border-color: var(--accent-color-1);
+}
+
+/* ::::: Header ::::: */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, .2);
+  padding: 0 2em;
+  z-index: 3;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav ul,
+header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 56px;
+  color: inherit;
+  text-decoration: none;
+  border-bottom-style: none;
+}
+
+header a.link {
+  font-weight: 500;
+  font-size: 1.2em;
+  padding: 0 20px;
+  outline: none;
+}
+
+header a.link:focus,
+header a.link:hover {
+  cursor: pointer;
+  background-color: var(--accent-color-1);
+  color: #ffffff;
+}
+
+header a.link.icon {
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+
+#header-mobile {
+  display: none;
+}
+
+/* ::::: Navigation ::::: */
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.nav-container > li {
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+  font-size: 19.2px;
+}
+
+@media screen and (max-width: 620px) {
+  /* Lists become lists in smaller screens */
+  .nav-container {
+    flex-direction: column;
+    justify-content: normal;
+  }
+  .nav-container > .card > a {
+    display: flex;
+    align-items: center;
+  }
+  .nav-container > .card .action-button > .label {
+    margin-left: 10px;
+  }
+}
+
+/* ::::: Action Buttons ::::: */
+
+.action-button {
+  color: inherit;
+  text-decoration: none;
+  border-bottom-style: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+  
+.action-button > .icon,
+.action-button > .mdi-set {
+  display: inline-block;
+  width: 20px;
+  padding: 4px;
+  border-radius: 99999em;
+  background-color: var(--accent-color-2);
+  text-align: center;
+  color: #fff;
+}
+
+.action-button:focus > .icon,
+.action-button:focus > .mdi-set,
+.action-button:hover > .icon,
+.action-button:hover > .mdi-set {
+  background-color: var(--accent-color-1);
+}
+
+.action-button > .icon {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.action-button > .label {
+  margin-left: 5px;
+  color: var(--accent-color-2);
+}
+
+.action-button:focus > .label,
+.action-button:hover > .label {
+  color: var(--accent-color-1);
+}
+
+/* ::::: Prompts ::::: */
+
+#modal {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-box {
+  width: 50%;
+  background-color: white;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  border-radius: 2em;
+  
+}
+
+#modal-inner {
+  max-height: 400px;
+  overflow: auto;
+}
+
+[prehidden] {
+  display: none;
+}
+
+.visually-hidden[active="false"] {
+  opacity: 0;
+  height: 0;
+  visibility: collapse;
+  animation: 500ms fade-out;
+  pointer-events: none;
+}
+
+.visually-hidden[active="true"] {
+  animation: 500ms fade-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    height: 100%;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    height: 100%;
+    transform: translateY(10px);
+    visibility: visible;
+  }
+}
+
+/* ::::: Footer ::::: */
+
+footer {
+  padding: 2em var(--side-distance);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+footer li {
+  margin-bottom: 5px;
+}
+
+footer .footer-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer .footer-box > div {
+  flex-basis: 300px;
+  padding-right: 1em;
+}
+
+#social-icons a {
+  font-size: 2.5em;
+  text-decoration: none;
+  border-style: none;
+  outline: none;
+}
+
+/* ::::: Responsive Design ::::: */
+
+@media screen and (min-width: 1000px) {
+  footer h3:first-child {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  footer .footer-box {
+    flex-direction: column;
+  }
+  footer .footer-box > div {
+    flex-basis: auto;
+  }
+
+  :root {
+    --side-distance: 1em;
+  }
+  #header-right,
+  header[active="false"] > ul:not(:first-child) {
+    display: none;
+  }
+  #header-mobile,
+  header[active="true"] > ul:not(#header-right) {
+    display: flex;
+  }
+  header,
+  #header-main {
+    flex-direction: column;
+  }
+  #header-left {
+    width: 100%;
+  }
+  #modal-box {
+    width: 100%;
+    border-radius: 0;
+  }
+  .video-frame {
+    width: 100%;
+  }
+}

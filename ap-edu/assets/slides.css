@@ -1,0 +1,124 @@
+/* ::::: Promo Slides ::::: */
+
+.promo-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.promo {
+  padding-bottom: 1.5em;
+  color: #fff;
+  text-shadow: 0px 2px 15px rgba(0, 0, 0, 1);
+}
+
+.promo-left {
+  flex-basis: 400px;
+}
+
+.promo h1,
+.promo h2 {
+  color: #fff;
+  line-height: 1em;
+  text-align: left;
+}
+
+.promo h1 {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.promo h2 {
+  font-size: 1.5em;
+}
+
+/* ::::: Promo Buttons ::::: */
+
+.promo .button {
+  padding: 15px;
+  font-size: 2em;
+  font-weight: 800;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 1em;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 1);
+  transition: background-color, border-color 0.2s;
+  text-align: center;
+}
+
+.promo .button:hover {
+  background-color: var(--accent-color-1);
+  border-color: var(--accent-color-1);
+  color: #fff;
+}
+
+/* ::::: Responsive Design ::::: */
+
+@media screen and (max-width: 1200px) {
+  .promo .button {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .promo h1 {
+    font-size: 2em;
+  }
+  .promo h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .promo h1 {
+    font-size: 1.5em;
+  }
+  .promo h2 {
+    font-size: 1em;
+  }
+  .promo .button {
+    font-size: 1em;
+    padding: 5px;
+  }
+  .promo-left {
+    padding-bottom: 0;
+  }
+  .promo-left {
+    flex-basis: 250px;
+  }
+}
+
+/* ::::: Custom Images ::::: */
+
+#cta-1 {
+  background: center / cover no-repeat url("images/promo-cta-1.jpg");
+  height: 0;
+  padding-top: 31.38%;
+}
+
+#cta-2 {
+  background: center / cover no-repeat url("images/promo-cta-2.jpg");
+  height: 0;
+  padding-top: 40%;
+}
+
+#adm-1 {
+  background: center / cover no-repeat url("images/jhs_banner.png");
+}
+
+#adm-2 {
+  background: center / cover no-repeat url("images/shs_banner.png");
+}
+
+#card-image-1 {
+  background: center / cover no-repeat url("images/info-card-1.jpg");
+}
+
+#card-image-2 {
+  background: center / cover no-repeat url("images/info-card-2.jpg");
+}
+
+#card-image-3 {
+  background: center / cover no-repeat url("images/info-card-3.jpg");
+}
