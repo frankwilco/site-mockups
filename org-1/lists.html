@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Lists</title>
+        <style type="text/css">
+            body {
+              max-width: 800px;
+              margin: auto;
+              font-family: "Segoe UI", sans-serif;
+            }
+            p code {
+              background-color: #e3e3e3;
+              border-radius: 5px;
+              padding: 1px;
+            }
+            hr {
+              border-style: solid;
+              border-color: #e3e3e3;
+            }
+            pre {
+              border: 1px solid #e3e3e3;
+              background-color: #fafafa;
+              padding: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="lists">Lists</h1>
+        <p>HTML provides two built-in ways to represent a list of items. But first, we have to take note of three important tags that we will use throughout this exercise: <code>&lt;li&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>.</p>
+        <h2 id="list-item">List item &lt;li&gt;</h2>
+        <p>Before we head on to the two methods of creating lists, the <code>&lt;li&gt;</code> or List Item element must be tackled first. Every entry that we will put in our list must be placed inside the list item element, except for the list element inside another list, or nested lists, to be discussed later.</p>
+        <h3>Example:</h3>
+<pre><code>&lt;li&gt;Item one&lt;/li&gt;
+&lt;li&gt;Item two&lt;/li&gt;
+&lt;li&gt;Item three&lt;/li&gt;</code></pre>
+        <hr />
+        <h2 id="unordered-lists">Unordered lists &lt;ul&gt;</h2>
+        <p>To begin with, the first (and probably the easiest) method of creating a list of items is expressing it in a bulleted form. For this purpose, <code>&lt;ul&gt;</code>, which stands for Unordered List can be used. In creating our own unordered list, we have to start with the <code>&lt;ul&gt;</code> tag, include our list entries using <code>&lt;li&gt;</code>, which means list item, and close the list with <code>&lt;/li&gt;</code>.</p>
+        <h3 id="example">Example:</h3>
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;This is the first item in the list.&lt;/li&gt;
+    &lt;li&gt;This is the second item in the list.&lt;/li&gt;
+    &lt;li&gt;And lastly, the final or third item in the list.&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        <h3 id="output">Output:</h3>
+        <ul>
+            <li>This is the first item in the list.</li>
+            <li>This is the second item in the list.</li>
+            <li>And lastly, the final or third item in the list.</li>
+        </ul>
+        <hr />
+        <h2 id="ordered-lists">Ordered lists &lt;ol&gt;</h2>
+        <p>Looks somehow easy, right? On to the second part, what if we want our list to be numbered? The <code>&lt;ol&gt;</code> tag, or Ordered List comes into play.</p>
+        <p>Similar to unordered lists, the general strucutre is practically the same, except that we now have to start with the <code>&lt;ol&gt;</code> tag, include our list entries using <code>&lt;li&gt;</code>, and close the list with <code>&lt;/ol&gt;</code></p>
+        <h3 id="example-1">Example:</h3>
+<pre><code>&lt;ol&gt;
+    &lt;li&gt;This is the first item in the list.&lt;/li&gt;
+    &lt;li&gt;This is the second item in the list.&lt;/li&gt;
+    &lt;li&gt;And lastly, the final or third item in the list.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <h3 id="output-1">Output:</h3>
+        <ol>
+            <li>This is the first item in the list.</li>
+            <li>This is the second item in the list.</li>
+            <li>And lastly, the final or third item in the list.</li>
+        </ol>
+        <hr />
+        <h2 id="attributes-accepted-by-ordered-lists">Attributes accepted by Ordered lists &lt;ol&gt;</h2>
+        <p>Ordered lists also accepts some attributes that might be useful in some cases. These are:</p>
+        <ul>
+            <li><code>reversed</code></li>
+            <li><code>type</code></li>
+            <li><code>start</code></li>
+        </ul>
+        <p><strong><code>reversed</code> attribute</strong></p>
+        <p>The first attribute, <code>reversed</code> interprets the list in a reversed order, that is, the counting or the way list items are numbered is from highest to lowest, like 5 to 1. It should be noted that this attribute does NOT reverse or modify the order of the list elements themselves, rather the counting of list times is the only thing that's changed.</p>
+        <h3 id="example-2">Example:</h3>
+<pre><code>&lt;ol reversed&gt;
+    &lt;li&gt;This is the first item in the list.&lt;/li&gt;
+    &lt;li&gt;This is the second item in the list.&lt;/li&gt;
+    &lt;li&gt;And lastly, the final or third item in the list.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <h3 id="output-2">Output:</h3>
+        <ol reversed="true">
+            <li>This is the first item in the list.</li>
+            <li>This is the second item in the list.</li>
+            <li>And lastly, the final or third item in the list.</li>
+        </ol>
+        <p><strong><code>type</code> attribute</strong></p>
+        <p>The second attribute, <code>type</code> allows us to set the numbering type, the style in which the list will be organized. There are only five (5) numbering types that are accepted by this attribute.</p>
+        <ul>
+            <li><code>a</code> for lowercase letters</li>
+            <li><code>A</code> for uppercase letters</li>
+            <li><code>i</code> for lowercase Roman numerals</li>
+            <li><code>I</code> for uppercase Roman numerals</li>
+            <li><code>1</code> for numbers (default)</li>
+        </ul>
+        <p>The following is an example that uses lowercase letters.</p>
+        <h3 id="example-3">Example:</h3>
+<pre><code>&lt;ol type=&quot;a&quot;&gt;
+    &lt;li&gt;This is the first item in the list.&lt;/li&gt;
+    &lt;li&gt;This is the second item in the list.&lt;/li&gt;
+    &lt;li&gt;And lastly, the final or third item in the list.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <h3 id="output-3">Output:</h3>
+        <ol type="a">
+            <li>This is the first item in the list.</li>
+            <li>This is the second item in the list.</li>
+            <li>And lastly, the final or third item in the list.</li>
+        </ol>
+        <p>The following is an example that uses uppercase Roman numerals.</p>
+        <h3 id="example-4">Example:</h3>
+<pre><code>&lt;ol type=&quot;I&quot;&gt;
+    &lt;li&gt;This is the first item in the list.&lt;/li&gt;
+    &lt;li&gt;This is the second item in the list.&lt;/li&gt;
+    &lt;li&gt;And lastly, the final or third item in the list.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <h3 id="output-4">Output:</h3>
+        <ol type="I">
+            <li>This is the first item in the list.</li>
+            <li>This is the second item in the list.</li>
+            <li>And lastly, the final or third item in the list.</li>
+        </ol>
+        <p><strong><code>start</code> attribute</strong></p>
+        <p>The third attribute, <code>start</code> specifies from what number should the list start. For example, we have a list of three items, but we wanted it to start counting from number 5. To do this, we'll use the <code>start</code> attribute. It should be noted that only Arabic numerals (1, 2, 3) are accepted by this attribute, regardless of what is defined in the <code>type</code> attribute that was shown earlier.</p>
+        <p>The following is an example of a list with three items, but begins counting with the number five (5):</p>
+        <h3 id="example-5">Example:</h3>
+<pre><code>&lt;ol start=&quot;5&quot;&gt;
+    &lt;li&gt;This is the first item in the list.&lt;/li&gt;
+    &lt;li&gt;This is the second item in the list.&lt;/li&gt;
+    &lt;li&gt;And lastly, the final or third item in the list.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <h3 id="output-5">Output:</h3>
+        <ol start="5">
+            <li>This is the first item in the list.</li>
+            <li>This is the second item in the list.</li>
+            <li>And lastly, the final or third item in the list.</li>
+        </ol>
+        <p>Likewise, the following is an example of a list with three items using uppercase Roman numerals:</p>
+        <h3 id="example-6">Example:</h3>
+<pre><code>&lt;ol type=&quot;I&quot; start=&quot;5&quot;&gt;
+    &lt;li&gt;This is the first item in the list.&lt;/li&gt;
+    &lt;li&gt;This is the second item in the list.&lt;/li&gt;
+    &lt;li&gt;And lastly, the final or third item in the list.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <h3 id="output-6">Output:</h3>
+        <ol type="I" start="5">
+            <li>This is the first item in the list.</li>
+            <li>This is the second item in the list.</li>
+            <li>And lastly, the final or third item in the list.</li>
+        </ol>
+        <hr />
+        <h2 id="nested-lists">Nested lists</h2>
+        <p>Perhaps you have this question: Can I mix both ordered lists and unordered lists?
+            The answer is: <strong>YES</strong>, and we call them nested lists, that is, a list inside another list. You can include a <em>nearly infinite</em> number of lists inside another list, and thus, you are abusing computers!</p>
+        <p>The following is an example of an ordered list with an unordered list inside it:</p>
+        <h3 id="example-7">Example:</h3>
+<pre><code>&lt;ol&gt;
+    &lt;li&gt;This is the first item in the list.&lt;/li&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Bullet 1&lt;/li&gt;
+        &lt;li&gt;Bullet 2&lt;/li&gt;
+        &lt;li&gt;Bullet 3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;li&gt;This is the second item in the list.&lt;/li&gt;
+    &lt;li&gt;And lastly, the final or third item in the list.&lt;/li&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Bullet 1&lt;/li&gt;
+        &lt;li&gt;Bullet 2&lt;/li&gt;
+        &lt;li&gt;Bullet 3&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/ol&gt;</code></pre>
+        <h3 id="output-7">Output:</h3>
+        <ol>
+            <li>This is the first item in the list.
+                <ul>
+                    <li>Bullet 1</li>
+                    <li>Bullet 2</li>
+                    <li>Bullet 3</li>
+                </ul>
+            </li>
+            <li>This is the second item in the list.</li>
+            <li>And lastly, the final or third item in the list.
+                <ul>
+                    <li>Bullet 1</li>
+                    <li>Bullet 2</li>
+                    <li>Bullet 3</li>
+                </ul>
+            </li>
+        </ol>
+        <p>Likewise, the same thing can be done with an unordered list inside an ordered list:</p>
+        <h3 id="example-8">Example:</h3>
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;This is the first item in the list.&lt;/li&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;li&gt;This is the second item in the list.&lt;/li&gt;
+    &lt;li&gt;And lastly, the final or third item in the list.&lt;/li&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/ul&gt;</code></pre>
+        <h3 id="output-8">Output:</h3>
+        <ul>
+            <li>This is the first item in the list.
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ol>
+            </li>
+            <li>This is the second item in the list.</li>
+            <li>And lastly, the final or third item in the list.
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ol>
+            </li>
+        </ul>
+        <hr />
+        <h2 id="abusing-nested-lists-not-to-be-taken-literally">Abusing Nested Lists (not to be taken literally)</h2>
+        <p>True to what I said earlier, you can practically include a <em>nearly infinite</em> number of lists inside another list:</p>
+        <h3 id="the-pyramid-of-giza-example">The Pyramid of Giza - Example:</h3>
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;This is the first item in the list.&lt;/li&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Aaaaa&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Aaaaa&lt;/li&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Aaaaa&lt;/li&gt;
+                &lt;ol&gt;
+                    &lt;li&gt;Loooooooo&lt;/li&gt;
+                    &lt;ol&gt;
+                        &lt;li&gt;Bbbbbbbbbb&lt;/li&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;AAAAAAAAAAAAAAAA&lt;/li&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;Bbbbbbbbbbbbbbbbbbb&lt;/li&gt;
+                                &lt;ol start=&quot;2&quot;&gt;
+                                    &lt;li&gt;AAAAAAAAAAAAAAAAA&lt;/li&gt;
+                                    &lt;ol type=&quot;I&quot;&gt;
+                                        &lt;li&gt;Looooooooooooooooooooooo&lt;/li&gt;
+                                        &lt;ul&gt;
+                                            &lt;li&gt;XXXXXXXXXXXXXXXXXXXXXXXX&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/ol&gt;
+                                &lt;/ol&gt;
+                            &lt;/ul&gt;
+                        &lt;/ul&gt;
+                    &lt;/ol&gt;
+                &lt;/ol&gt;
+            &lt;/ul&gt;
+        &lt;/ul&gt;
+    &lt;/ul&gt;
+&lt;/ul&gt;</code></pre>
+        <h3 id="the-pyramid-of-giza-output">The Pyramid of Giza - Output:</h3>
+        <ul>
+            <li>This is the first item in the list.</li>
+            <ul>
+                <li>Aaaaa</li>
+                <ul>
+                    <li>Aaaaa</li>
+                    <ul>
+                        <li>Aaaaa</li>
+                        <ol>
+                            <li>Loooooooo</li>
+                            <ol>
+                                <li>Bbbbbbbbbb</li>
+                                <ul>
+                                    <li>AAAAAAAAAAAAAAAA</li>
+                                    <ul>
+                                        <li>Bbbbbbbbbbbbbbbbbbb</li>
+                                        <ol start="2">
+                                            <li>AAAAAAAAAAAAAAAAA</li>
+                                            <ol type="I">
+                                                <li>Looooooooooooooooooooooo</li>
+                                                <ul>
+                                                    <li>XXXXXXXXXXXXXXXXXXXXXXXX</li>
+                                                </ul>
+                                            </ol>
+                                        </ol>
+                                    </ul>
+                                </ul>
+                            </ol>
+                        </ol>
+                    </ul>
+                </ul>
+            </ul>
+        </ul>
+        <hr />
+        <h2 id="references">References</h2>
+        <ul>
+            <li>MDN Contributors. (2020, December 23). &lt;ul&gt;: The Unordered List element. <em>Mozilla Web Docs</em>. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul</a></li>
+            <li>MDN Contributors. (2020, December 18). &lt;ol&gt;: The Ordered List element. <em>Mozilla Web Docs</em>. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol</a></li>
+            <li>MDN Contributors. (2020, December 18). &lt;li&gt;. <em>Mozilla Web Docs</em>. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li</a></li>
+        </ul>
+        <hr />
+        <div id="footer">
+            Site code is publicly available <a href="https://github.com/FranklinDM/site-mockups">here</a>.
+        </div>
+        <br/>
+    </body>
+</html>
