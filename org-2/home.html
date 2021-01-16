@@ -1,54 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- Head element is the part of the document that
+         contains this page's metadata (i.e. title, stylesheets to apply) -->
     <head>
+        <!-- We define the character set here to avoid garbled text -->
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <!-- This line tells mobile browsers (Chrome on Android)
+             that our page is "responsive" and adapts to the size of the screen -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- This is the title of our web page and it appears on the tab -->
         <title>Home - User Page</title>
+        <!-- The following tag tells the browser to load the "style" required by this web page -->
         <link href="common.css" rel="stylesheet">
     </head>
+    <!-- The body element contains the main contents/stuff that the browser will show to the user -->
     <body>
+        <!-- This is the header and it contains two columns: (1) the logo and (2) the title -->
         <header>
+            <!-- The div element is also called the "content division" element
+                 It allows us to separate and organize the page's contents
+                 The CSS side of things takes care of the actual layout -->
+            <!-- We call this the left-column by stating it in the class attribute
+                 This will be repeated around the page for content that is contained
+                 in a "left" column -->
             <div class="left-column">
+                <!-- This image tag tells the browser to load up the "logo.png" image.
+                     The "src" attribute is a shorter term for source.
+                     This image should contain our personal logo. -->
                 <img src="logo.png" />
             </div>
+            <!-- Same here, but this time, the content is on the right, so, right-column -->
             <div class="right-column">
-                <span>Home Page</span>
+                <!-- The following is the title of the page, whose text is
+                     enclosed in a "span" element, allowing us to style this in CSS
+                     if we choose to include an "id" or "class" attribute. -->
+                <span>Home</span>
             </div>
         </header>
+        <!-- This div element is called the main container at it contains the primary stuff
+             that most users will see in our web page -->
         <div class="main-container">
+            <!-- Again, it is divided into two columns:
+                 (1) sidebar for navigating the site
+                 (2) the content, (article, info, etc.)
+                 Since we only have two columns, we'll reuse the names that
+                 we used earlier in the class attribute for the header, so,
+                 for the sidebar, we'll call it the left-column.
+                 
+                 If you've noticed, we've also included an "id" attribute.
+                 The main difference between the "id" and "class" attributes
+                 is we use the "id" for elements that are unique in the sense
+                 that we want to style it differently from the rest while
+                 "class" is for elements that we'd want to have the same
+                 styling/style applied across the page. -->
             <div id="sidebar" class="left-column">
+                <!-- It is best practice to enclose navigation elements using
+                     the <nav> element, and use <li> or list items for the
+                     pages/links that we'd include here. The reason for this
+                     is we want the page to be accessible for everyone,
+                     (i.e. disabled people who will visit your page.)-->
                 <nav>
+                    <!-- The first list item in our navigation is the home page.
+                         The <a> or anchor element tells the browser that this
+                         specific text should be "clickable" and will redirect
+                         the user to the web page that we specify in
+                         the "href" attribute. -->
                     <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="services.html">Services</a></li>
                 </nav>
             </div>
+            <!-- This is the second column, which is also known via the
+                 class attribute as "right-column". We also gave it the
+                 name "content" using the identifier/id attribute.
+                 One thing that may seem different here is we've now
+                 included a "card-container" in the class attribute
+                 alongside the "right-column". The thing is, we can
+                 apply multiple "classes" or styles to elements by
+                 delimiting/separating these with a space.
+                 
+                 However, the same is not true with the identifier/id attribute.
+                 We can only give one unique ID to an element and you should
+                 avoid giving other elements the same ID too, unless you'd want
+                 the FBI (or NBI in our case) knocking at your doorstep. (joke)
+                 
+                 In this case, whatever style that is defined in CSS
+                 for "right-column" and "card-container" will also be applied
+                 to this element. 
+                 
+                 For this exercise, we'll divide content using "cards" and
+                 apply the "card" concept for separating our content, similar
+                 to the playing cards found in Solitaire or w/e card game
+                 it is that you know. Since we intend to include "cards"
+                 inside the content element, we'd also call it a 
+                 "card-container" using the class attribute. -->
             <div id="content" class="right-column card-container">
+                <!-- This is the first card, and since we'd like this
+                     to be styled the same with other cards, we included
+                     "card" in the class attribute. Also, we'd be separating
+                     this into two columns, which is why we're adding
+                     "two-column" into the class attribute. -->
                 <div class="card two-column">
-                    <div class="left-column">
+                    <!-- We intend to place an image in this column, so,
+                         include "image-column" in its class attribute -->
+                    <div class="image-column">
+                        <!-- Tell the browser to show an image named "main.png" -->
+                        <img src="main.png"/>
                     </div>
-                    <div class="right-column">
+                    <!-- For this one, we intend to place text and other content
+                         in this column, so, include "content-column"
+                         in its class attribute-->
+                    <div class="content-column">
+                        <!-- As an example, say that we're placing a paragraph of text
+                             here, so we'd enclose this "paragraph" using the "p" element. -->
                         <p>Lorem ipsum</p>
                     </div>
                 </div>
-                <div class="card-container stack">
+                <!-- This is the second element in the content container and because
+                     we wanted this to have a horizontal appearance and have another
+                     set of cards inside it, we'd include "card-container" 
+                     and "horizontal" in the class attribute. As stated earlier, CSS
+                     will handle how this will be "displayed" or presented. -->
+                <div class="card-container horizontal">
+                    <!-- The first card inside our card container that is also
+                         inside the content container. Since this is a card,
+                         include "card" in the class attribute and because we'd
+                         want this card to have two rows, with the image on top
+                         and text/content on the bottom, include "two-row" also
+                         in the class attribute. -->
                     <div class="card two-row">
+                        <!-- A row containing an image, hence, include "image-row"
+                             in the class attribute. -->
                         <div class="image-row">
+                            Image 1
                         </div>
+                        <!-- Same here, a row containing text/other content, so include
+                             "content-row" in the class attribute. -->
                         <div class="content-row">
+                            <p>Content 1</p>
                         </div>
                     </div>
+                    <!-- This is the second card and we'd just repeat the same process
+                         that we did in the first card until we have three (3) cards. -->
                     <div class="card two-row">
                         <div class="image-row">
+                            Image 2
                         </div>
                         <div class="content-row">
+                            <p>Content 2</p>
                         </div>
                     </div>
+                    <!-- Ditto. -->
                     <div class="card two-row">
                         <div class="image-row">
+                            Image 3
                         </div>
                         <div class="content-row">
+                            <p>Content 3</p>
                         </div>
                     </div>
                 </div>

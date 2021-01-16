@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- The head and all elements until the sidebar are copy-pasted
+         from the home page example. We'd just change the page title
+         and header title to reflect what this page is.
+    -->
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Page title here -->
         <title>Services - User Page</title>
         <link href="common.css" rel="stylesheet">
     </head>
@@ -12,6 +17,7 @@
                 <img src="logo.png" />
             </div>
             <div class="right-column">
+                <!-- Header title here -->
                 <span>Services</span>
             </div>
         </header>
@@ -24,23 +30,49 @@
                     <li><a href="services.html">Services</a></li>
                 </nav>
             </div>
-            <div id="content" class="right-column card-container">
+            <!-- This is the "actual" content. Same explanation from the home page example.
+                 One thing you may have noticed from the wireframe is that the style
+                 of the cards will be reversed in an "even" number-like style. For example,
+                 the second, fourth, and sixth cards should have content/text on the left
+                 and the image on the right. To achieve this, we'll just include "alternating"
+                 in the class attribute since CSS can handle this behavior without
+                 manual mangling or updating the actual structure itself or in other words,
+                 the process can be "dynamic", less headaches for us dealing with the structure.
+            -->
+            <div id="content" class="right-column card-container alternating">
                 <div class="card two-column">
+                    <!-- We intend to place an image in this column, so,
+                         include "image-column" in its class attribute -->
                     <div class="image-column">
+                        <!-- Tell the browser to show an image named "service1.png" -->
+                        <img src="service1.png"/>
                     </div>
+                    <!-- For this one, we intend to place text and other content
+                         in this column, so, include "content-column"
+                         in its class attribute-->
                     <div class="content-column">
+                        <!-- As an example, say that we're placing a paragraph of text
+                             here, so we'd enclose this "paragraph" using the "p" element. -->
+                        <p>Content 1</p>
                     </div>
                 </div>
+                <!-- This is the second card and we'd just repeat the same process
+                     that we did in the first card until we have three (3) cards. -->
                 <div class="card two-column">
                     <div class="image-column">
+                        Service Image 2
                     </div>
                     <div class="content-column">
+                        <p>Content 2</p>
                     </div>
                 </div>
+                <!-- Ditto. -->
                 <div class="card two-column">
                     <div class="image-column">
+                        Service Image 3
                     </div>
                     <div class="content-column">
+                        <p>Content 3</p>
                     </div>
                 </div>
             </div>

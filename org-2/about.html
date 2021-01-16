@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- The head and all elements until the sidebar are copy-pasted
+         from the home page example. We'd just change the page title
+         and header title to reflect what this page is.
+    -->
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Page title here -->
         <title>About - User Page</title>
         <link href="common.css" rel="stylesheet">
     </head>
@@ -12,6 +17,7 @@
                 <img src="logo.png" />
             </div>
             <div class="right-column">
+                <!-- Header title here -->
                 <span>About</span>
             </div>
         </header>
@@ -24,35 +30,73 @@
                     <li><a href="services.html">Services</a></li>
                 </nav>
             </div>
+            <!-- This is the "actual" content. Same explanation from the home page example. -->
             <div id="content" class="right-column card-container">
+                <!-- The wireframe says that we need another "header" here, so,
+                     insert a card with an identifier/id called "about-header",
+                     and since it is a card, include "card" in the class attribute -->
                 <div id="about-header" class="card">
+                <!-- NOTE: I'm unsure as to what the actual content of the header is though. -->
                 Header goes here
                 </div>
-                <div class="card-container stack">
+                <!-- Similar to what we did in the home page example, we will
+                     include another card container here to copy the horizontal
+                     appearance in the wireframe. To achieve this, we'd
+                     include "card-container" and "horizontal" in the class attribute.
+                     As stated earlier, CSS will handle how this wil
+                     be "displayed" or presented. -->
+                <div class="card-container horizontal">
+                    <!-- The first card inside our card container that is also
+                         inside the content container. Since this is a card,
+                         include "card" in the class attribute and because we'd
+                         want this card to have two rows, with the image on top
+                         and text/content on the bottom, include "two-row" also
+                         in the class attribute. -->
                     <div class="card two-row">
+                        <!-- One thing that may seem different from the other examples
+                             is that this card only has textual content. So, we'd--
+                             simply name the first row as the "title-row" using the
+                             class attribute. -->
                         <div class="title-row">
                             <h3>Title</h3>
                         </div>
+                        <!-- Same goes here, since this is content,
+                             use "content-row" in the class attribute. -->
                         <div class="content-row">
+                            <p>Content 1</p>
                         </div>
                     </div>
-                    <div class="card two-row card-container">
-                        <div class="card">
+                    <!-- For the second card, we'll just compromise for consistency's sake
+                         and include the image as a row inside this card. 
+                         -->
+                    <div class="card two-row">
+                        <!-- The first row should contain our image, hence, include
+                             "image-row" in our class attribute. -->
+                        <div class="image-row">
+                            <!-- This image tag tells the browser to load up the "about-image.png" image.
+                                 The "src" attribute is a shorter term for source.
+                        `        This image should contain the image that we'd want in our about page. -->
                             <img src="about-image.png"/>
+                            Image 1
                         </div>
-                        <div class="card two-row">
-                            <div class="title-row">
-                                <h3>Social Media Accounts (placeholder)</h3>
-                            </div>
-                            <div class="content-row">
-                            </div>
+                        <!-- The second row, called "content-row", so we'll just include that
+                             in our class attribute. This section will contain our social
+                             networking accounts. -->
+                        <div class="content-row">
+                            <h3>Social Networking Accounts (placeholder)</h3>
                         </div>
                     </div>
+                    <!-- And... for the last row, we'll just copy the contents
+                         of the first card that we made and replace the associated title
+                         and content/text with what we have to include in this card.-->
                     <div class="card two-row">
+                        <!-- The title row -->
                         <div class="title-row">
                             <h3>Title</h3>
                         </div>
+                        <!-- And the content row -->
                         <div class="content-row">
+                            <p>Content 2</p>
                         </div>
                     </div>
                 </div>

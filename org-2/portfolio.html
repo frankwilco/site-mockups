@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- The head and all elements until the sidebar are copy-pasted
+         from the home page example. We'd just change the page title
+         and header title to reflect what this page is.
+    -->
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Page title here -->
         <title>Portfolio - User Page</title>
         <link href="common.css" rel="stylesheet">
     </head>
@@ -12,6 +17,7 @@
                 <img src="logo.png" />
             </div>
             <div class="right-column">
+                <!-- Header title here -->
                 <span>Portfolio</span>
             </div>
         </header>
@@ -24,24 +30,43 @@
                     <li><a href="services.html">Services</a></li>
                 </nav>
             </div>
+            <!-- This is the "actual" content. Same explanation from the home page example. -->
             <div id="content" class="right-column card-container">
-                <div class="card-container stack floating">
+                <!-- Now, for this one, since we'd want to imitate that "floating"
+                     kind of style from the wireframe (?), we'll include
+                     "floating" in the class attribute. As stated many times earlier,
+                     the CSS people will handle the presentation. -->
+                <div class="card-container horizontal floating">
+                    <!-- Cards will be used here again, we want it to have two rows. -->
+                    <div class="card two-row">
+                        <!-- An image row  -->
+                        <div class="image-row">
+                            Image 1
+                        </div>
+                        <!-- And a text/content row
+                             You see, since the style is common across cards
+                             with image rows or content rows, we'll just reuse
+                             them again around here. -->
+                        <div class="content-row">
+                            <p>Content 1</p>
+                        </div>
+                    </div>
+                    <!-- The second card is practically identical with the first one
+                         and we'll just update the contents untill we have three cards. -->
                     <div class="card two-row">
                         <div class="image-row">
+                            Image 2
                         </div>
                         <div class="content-row">
+                            <p>Content 2</p>
                         </div>
                     </div>
                     <div class="card two-row">
                         <div class="image-row">
+                            Image 3
                         </div>
                         <div class="content-row">
-                        </div>
-                    </div>
-                    <div class="card two-row">
-                        <div class="image-row">
-                        </div>
-                        <div class="content-row">
+                            <p>Content 3</p>
                         </div>
                     </div>
                 </div>

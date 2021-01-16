@@ -1,0 +1,46 @@
+
+/* The following elements follow flex[ible] layout */
+header,
+.card,
+.card-container,
+.main-container {
+  display: flex;
+}
+
+/* Placeholder for some elements to show that there is layout */
+header,
+#sidebar,
+#content,
+.card {
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.image-column,
+.left-column {
+  flex-grow: 0;
+}
+
+.card,
+.content-column,
+.right-column {
+  flex-grow: 1;
+}
+
+.card-container.alternating > .card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Placeholder borders */
+.title-row,
+.image-column,
+.image-row,
+.content-column,
+.content-row {
+  border: 1px solid black;
+}
+
+.card-container:not(.horizontal),
+.card.two-row {
+  flex-direction: column;
+}
