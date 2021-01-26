@@ -12,6 +12,8 @@
 * Home page content
   - Analogy to playing cards
   - Card containers
+  - Card type 2: Image and content
+  - Card type 3: Two column; image and content
   - Actual content
 2. About
 * Initial elements (head and body until sidebar)
