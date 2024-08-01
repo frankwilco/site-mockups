@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Poem</title>
+        <style>
+body {
+  margin: 0;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;  
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column.center,
+.flex-row.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.text-attached {
+  font-family: "Franklin Gothic", sans-serif;
+  font-size: 28px;
+}
+
+.em {
+  font-family: "Rockwell", serif;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.wd {
+  font-size: 90px;
+  margin: 0;
+}
+
+#main-container {
+  height: 100vh;
+  position: relative;
+}
+
+#main-container > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+#header {
+  font-family: "Impact", sans-serif;
+  font-size: 5em;
+}
+
+#header > p {
+  margin: 0;
+}
+        </style>
+    </head>
+    <body>
+        <main id="main-container">
+            <div id="col" class="flex-column center">
+                <div id="header" class="flex-row center">
+                    <p>~</p>
+                    <p>Life</p>
+                    <p>~</p>
+                </div>
+                <div class="text-attached" id="text-transform-6">
+                is full of
+                </div>
+                <div class="text-attached" id="text-transform-6">
+                <span class="em">talking</span> and <span class="em">listening</span>
+                </div>
+                <div class="text-attached" id="text-transform-4">
+                but not everything
+                </div>
+                <div class="text-attached" id="text-transform-2">
+                should be <span class="em">talked about</span>
+                </div>
+                <div class="text-attached" id="text-transform-1">
+                and not everything
+                </div>
+                <div class="text-attached" id="text-transform-3">
+                should be <span class="em">heard</span>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

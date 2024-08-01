@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Poem (circular)</title>
+        <style>
+body {
+  margin: 0;
+}
+
+#main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#text-emphasis {
+  font-size: 2.5em;
+}
+
+.text-attached {
+  font-size: 1.5em;
+  position: absolute;
+  text-align: right;
+}
+
+#text-transform-1 {
+  transform: translate(-300px, 0px) rotate(0deg);
+}
+#text-transform-2 {
+  transform: translate(-280px, -70px) rotate(15deg);
+}
+#text-transform-3 {
+  transform: translate(-280px, 70px) rotate(-15deg);
+}
+#text-transform-4 {
+  transform: translate(-235px, -140px) rotate(33deg);
+}
+#text-transform-5 {
+  transform: translate(-235px, 140px) rotate(-33deg);
+}
+#text-transform-6 {
+  transform: translate(-180px, -190px) rotate(45deg);
+}
+#text-transform-7 {
+  transform: translate(-180px, 190px) rotate(-45deg);
+}
+        </style>
+    </head>
+    <body>
+        <main id="main-container">
+            <div id="text-emphasis">
+            Hello world
+            </div>
+            <div class="text-attached" id="text-transform-6">
+            [1]And it watched over me.
+            </div>
+            <div class="text-attached" id="text-transform-4">
+            [2]And it watched over me.
+            </div>
+            <div class="text-attached" id="text-transform-2">
+            [3]And it watched over me.
+            </div>
+            <div class="text-attached" id="text-transform-1">
+            [4]And it watched over me.
+            </div>
+            <div class="text-attached" id="text-transform-3">
+            [5]And it watched over me.
+            </div>            
+            <div class="text-attached" id="text-transform-5">
+            [6]And it watched over me.
+            </div>
+            <div class="text-attached" id="text-transform-7">
+            [7]And it watched over me.
+            </div>
+        </main>
+    </body>
+</html>

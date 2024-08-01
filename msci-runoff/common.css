@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;  
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column.center,
+.flex-row.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.text-attached {
+  font-family: "Franklin Gothic", sans-serif;
+  font-size: 28px;
+}
+
+.em {
+  font-family: "Rockwell", serif;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.wd {
+  font-size: 90px;
+  margin: 0;
+}
+
+#main-container {
+  height: 100vh;
+}
+
+#header {
+  font-family: "Impact", sans-serif;
+  font-size: 5em;
+}
+
+#header > p {
+  margin: 0;
+}
